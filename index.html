@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐲Feliz cumpleaños🩸</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f09797; /* Color de fondo */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h1 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff483a;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    color: #333;
+}
+
+.gif {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="gif" src="prueba1.gif" alt="GIF Izquierda">
+  <img class="gif" src="prueba2.gif" alt="GIF Derecha">
+  <h1> ❤️Andhy❤️</h1>
+  <form id="nameForm">
+    <label for="name">Ingresa la palabra secreta</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="message" class="hidden">
+    <p id="greeting">¡Buenas noches<span id="outputName">linda</span>!</p>
+    <p id="birthdayWishes"></p>
+   <p>Holis vv, perdón por la hora 😭 pero no quería dejar pasar tu día sin decirte algo bonito 💜</p>
+    <p>Hoy celebramos a alguien demasiado especial, y de verdad espero que tu día haya estado lleno de momentos lindos, risas y sorpresas ✨</p> 
+    <p>Tienes algo súper especial… de esas personas que cuando sonríen hacen que todo se sienta mejor. Literal, tienes una sonrisa que ilumina todo, de esas que uno no olvida</p>
+    <p>Y ni hablar de tu forma de ser, porque esa manera tan tuya de transmitir paz y buena vibra se siente un montón, como esos momentos donde todo simplemente está bien 🎶</p>
+    <p>Gracias por ser tan linda persona, por tu apoyo y por siempre sumar de la mejor manera 🙌💖</p>
+    <p>Que este nuevo año de vida venga con puras cosas bonitas, sueños cumplidos y mil razones para seguir sonriendo así 💜</p>
+
+    <br>💜 ¡Feliz cumpleaños! 💜
+  </div>
+</div>
+
+<script>
+    document.getElementById("nameForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value.trim();
+        var greeting = document.getElementById("greeting");
+        var message = document.getElementById("message");
+        var outputName = document.getElementById("outputName");
+        var birthdayWishes = document.getElementById("birthdayWishes");
+        // Cambios en la condición para aceptar "Dar 03" sin importar mayúsculas o minúsculas
+        if (name.toLowerCase() === "0330") {
+            outputName.textContent = "0330"; // Usar el nombre ingresado
+            greeting.textContent = "¡Buenas noches linda!";
+            birthdayWishes.style.display = "block";
+            message.classList.remove("hidden");
+        } else {
+            alert("No eres Vero. La página se cerrará.");
+            window.close(); // Cerrar la página
+        }
+        document.getElementById("name").value = "";
+    });
+    </script>
+<div>
+    <audio id="audio" src="solamente.mp3" type="audio/mpeg"></audio>
+  </div>
+  <script>
+    document.body.addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      audio.play();
+    });
+    </script>
+<script defer src="https://app.embed.im/snow.js"></script> 
+</body>
+</html>
